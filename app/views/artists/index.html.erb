@@ -1,7 +1,9 @@
 <h1>Artists</h1>
   <div>
+    <% if flash.present? %>
     <%flash.each do|name, msg| -%>
     <%= content_tag :div, msg, class: name %>
+    <%end -%>
     <%end -%>
   </div>
 
