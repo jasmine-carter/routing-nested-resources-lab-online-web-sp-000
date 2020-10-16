@@ -1,6 +1,6 @@
 <h1><%= @artist.name %></h1>
 <div>
-  binding.pry
+  <%binding.pry%>
   <% if flash.present? %>
   <%flash.each do|name, msg| -%>
   <%= content_tag :div, msg, class: name %>
