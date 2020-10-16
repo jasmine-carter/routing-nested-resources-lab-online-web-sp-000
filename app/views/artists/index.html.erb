@@ -1,4 +1,10 @@
 <h1>Artists</h1>
+  <div>
+    <%flash.each do|name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+    <%end -%>
+  </div>
+
 <ul>
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_songs_path(artist) %></li>
